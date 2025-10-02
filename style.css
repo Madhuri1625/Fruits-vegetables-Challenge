@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff; /* Light blue background */
+    text-align: center;
+}
+
+/* --- Utility Classes --- */
+.hidden {
+    display: none !important;
+}
+
+/* --- Screen Styles (Start, Game, Win) --- */
+#start-screen, #game-screen, #win-screen {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+/* --- Header (Score/Time/Pause) --- */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+/* --- Name Box (The Challenge) --- */
+#fruit-name-box {
+    font-size: 3em;
+    font-weight: 900;
+    color: #4CAF50;
+    padding: 20px;
+    margin: 20px 0;
+    border: 3px solid #4CAF50;
+    border-radius: 10px;
+    background: #e8f5e9;
+    min-height: 1.5em; /* Ensure stable height */
+    box-sizing: border-box;
+}
+
+/* --- Button Container --- */
+#image-buttons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.fruit-button {
+    font-size: 3.5em;
+    padding: 10px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fruit-button:hover {
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.fruit-button:active {
+    transform: scale(0.95);
+}
+
+/* --- Messages and Rules --- */
+#message {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#rules-box {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px dashed #4CAF50;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+/* --- Win Screen Styles --- */
+#win-screen h1 {
+    color: #FFC107;
+    font-size: 2.5em;
+}
+
+#win-screen h2 {
+    color: #4CAF50;
+    font-size: 1.5em;
+}
+
+#win-message p {
+    margin: 5px 0;
+}
+
+/* --- Confetti/Ribbon Effect --- */
+#confetti-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+    /* Basic style for the ribbons (you might need a library for complex confetti) */
+    background: radial-gradient(circle, transparent 20%, rgba(255, 215, 0, 0.5) 20%, rgba(255, 215, 0, 0.5) 40%, transparent 40%) 0 0, 
+                radial-gradient(circle, transparent 20%, rgba(135, 206, 250, 0.5) 20%, rgba(135, 206, 250, 0.5) 40%, transparent 40%) 50px 50px;
+    background-size: 100px 100px;
+    opacity: 0.8;
+    display: none; /* Initially hidden */
+}

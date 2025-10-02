@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit & Veggie Match Challenge</title>
+    <link rel="stylesheet" href="style.css">
+ </head>
+<body>
+
+    <div id="confetti-layer"></div>
+
+    <div id="start-screen">
+        <h1>Fruit & Veggie Match Challenge!</h1>
+        <p>Match the name to the correct emoji before the time runs out.</p>
+        <button id="start-button">Start Game</button>
+        <button id="rules-toggle">Show Rules</button>
+        
+        <div id="rules-box" class="hidden">
+            <h2>Game Rules:</h2>
+            <ul>
+                <li>A name (e.g., APPLE) will appear at the top.</li>
+                <li>Click the correct emoji button (🍎) below to score a point.</li>
+                <li>You have 90 seconds to match all items.</li>
+                <li>Good luck!</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="game-screen" class="hidden">
+        <div id="header">
+            <button id="pause-button">Pause</button>
+            <div id="score">Score: <span id="score-display">0</span></div>
+            <div id="timer">Time: <span id="time-display">90</span>s</div>
+        </div>
+
+        <div id="fruit-name-box"></div>
+
+        <div id="image-buttons-container"></div>
+        
+        <div id="message"></div>
+    </div>
+
+    <div id="win-screen" class="hidden">
+        <div id="win-message">
+            </div>
+        <button onclick="window.location.reload()">Play Again</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
